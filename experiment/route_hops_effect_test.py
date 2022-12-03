@@ -17,7 +17,10 @@ from netsquid.components import instructions as instr
 from netsquid.util.datacollector import DataCollector
 from netsquid.protocols.protocol import Signals
 from matplotlib import pyplot as plt
-
+"""
+This program explores the reasons for fidelity decline caused by the hop increase in the centralized quantum internet.
+The program takes about 3 minutes to complete.
+"""
 def define_network_and_protocol(depolar_rate,dephase_rate,qchannel_loss_init,qchannel_loss_noisy):
     network = Centralized_Chain_Network_setup(node_distance=100,depolar_rate=depolar_rate,dephase_rate=dephase_rate,
                              qchannel_loss_init=qchannel_loss_init, qchannel_loss_noisy=qchannel_loss_noisy)
@@ -605,21 +608,3 @@ if __name__ == '__main__':
     print(data)
     
     plt.show()
-
-
-"""
- 这张图表现了在不同环境变量的情况下路径跳数变化对Fidelity的影响。量子通信的环境变量分别是depolar_rate, dephase_rate, qchannel_loss_init_rate, qchannel_loss_noisy_rate。四条折线分别表示其指定一个环境变量为设定值，
-其余三个环境变量为0，目的是为了探究路径跳数对Fidelity影响在不同环境变量下的敏感度，需要补充的是，LABEL中设定的环境变量具体值是为了能够展示更清晰的实验结果。我们从图中Fidelity的下降率可以得出，
-三个环境变量dephase_rate,qchannel_loss_init_rate, qchannel_loss_noisy_rate 下的跳数对fidelity影响敏感度是比较明显的，而depolar_rate 下的跳数-fidelity影响敏感度则稍低一些，这是由于depolar_rate指的是每秒量子存储器发生
-去极化的概率，而实验中的一次量子通信都是在1秒内完成的，所以在跳数增加但没有显著通信时间增加的情况下，depolar_rate下的跳数-fidelity影响敏感度有限，但是跳数增加使得途径的量子存储器数增加，由于累积效应，还是会导致
-当在路径跳数变多时，Fidelity下降。
-
-论文中要做说明，各个环境RATE的取值，指的是所有设备都取该值。
-
-注意！！！(如果出来的实验图有明显的敏感度差别 就说敏感度的事情（即上面敏感度那段话），如果没有明显差别，就不用说敏感度的事情（笼统的说，不同的环境变量对于hop-fidelity 都有一定的影响）。倾向于笼统说，因为好像每次运行出来的图dephase_rate 和depolar rate
-的斜率会有一点变化。
-
-图中每一个数据点都是在重复100次实验后得出的Fidelity均值及其标准误差。
-
-"""
-

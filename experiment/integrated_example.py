@@ -19,8 +19,8 @@ from util.CentralController import CentralControllerInfoTable,DomainShortestPath
 from netsquid.protocols.protocol import Signals
 
 """
-this is a integrated example of centralized quantum internet end to end communication.
-this example contain all protocols which is designed in paper.
+This is a integrated example of centralized quantum internet communication.
+This example contains all protocols which is designed in paper.
 """
 
 def define_centralized_cellular_network(depolar_rates,dephase_rates,qchannel_loss_init,qchannel_loss_noisy):

@@ -12,13 +12,13 @@ from netsquid.nodes.network import Network
 from pydynaa import EventExpression
 
 class DistributedEntanglementDistribution(NodeProtocol):
-    """Controller start to prepare entangment and distribute entanglement.
+    """Repeater start to prepare entangment and distribute entanglement.
 
     Parameters
     ----------
     node : :class:`~netsquid.nodes.node.Node`
         Node to gennerate&distribute or receive Entanglement Pair
-    role : "controller" or "repeater"
+    role : "generator" or "receiver"
         Whether this protocol should act as a controller or a repeater. Both are needed.
     start_expression : :class:`~pydynaa.core.EventExpression` or None, optional
         Event Expression to wait for before starting entanglement round.

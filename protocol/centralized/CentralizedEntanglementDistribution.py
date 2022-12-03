@@ -18,7 +18,7 @@ class CentralizedEntanglementDistribution(NodeProtocol):
     ----------
     node : :class:`~netsquid.nodes.node.Node`
         Node to gennerate&distribute or receive Entanglement Pair
-    role : "controller" or "repeater"
+    role : "controller", "repeater" or "user"
         Whether this protocol should act as a controller or a repeater. Both are needed.
     start_expression : :class:`~pydynaa.core.EventExpression` or None, optional
         Event Expression to wait for before starting entanglement round.

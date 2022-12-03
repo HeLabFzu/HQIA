@@ -215,5 +215,3 @@ def Distributed_Cellular_Network_setup(prep_delay=0, num_mem_positions=6, node_d
 #    print(conn)
 #for node in network.nodes.values():
 #    print(node.name, node.qmemory)
-
-### 设置一下三组通信组的位置(保证三组hop数不同)，在传统拓扑中User被直接连接到替代Controller的Repeater上，这样更接近集中式拓扑的设置，对比起来有说服力###

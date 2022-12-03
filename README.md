@@ -7,12 +7,12 @@ The quantum internet is an advanced network that connects quantum systems. The r
 	+ `environmental_parameter_effect_test.py` impact of environmental interference
 	+ `route_hops_effect_test.py`     hops vs. fidelity
 	+ `path_with_different_environmental_parameter_effect_test.py` communication fidelity under integrated conditions
-	+ `entanglement_distribution_solution_test.py` performance of entanglement preparation & distributed solution
+	+ `entanglement_distribution_solution_test.py` performance of entanglement preparation & distribution solution
 	+ `routing_algorithm_comparison_equivalent_parameter_network.py` routing in equivalent parameter network
 	+ `routing_algorithm_comparison_diversified_parameter_network_dephase.py` routing in diversified parameter network (dephasing rate)
 	+ `routing_algorithm_comparison_diversified_parameter_network_loss_init.py` routing in diversified parameter network (Q-channel loss init rate)
 	+ `routing_algorithm_comparison_diversified_parameter_network_loss_noisy.py` routing in diversified parameter network (Q-channel loss noise)
-	+ `3d_heat_map_centralized_routing.py` centralized routing algorithm (CER) with integrated environmental parameters
+	+ `3d_heat_map_centralized_routing.py` Centralized Entanglement Routing (CER) with integrated environmental parameters
 	+ `noisy_limitation_test.py` shows the maximum acceptable noise
 of a 100 km quantum channel is 0.2 dB/km
 - `protocol`                     protocols for quantum internet

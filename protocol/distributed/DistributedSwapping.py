@@ -20,7 +20,7 @@ class DistributedSwapping(NodeProtocol):
         Port to use for classical IO communication between the repeater, localcontroller and corrector node.
     portout : :py:class:`~netsquid.components.component.Port`
         Port to use for classical IO communication in the localcontroller.
-    role : "repeater", "localcontroller", or "corrector"
+    role : "repeater" or "corrector"
         Whether this protocol should act as repeater, localcontroller, centralcontroller or corrector. All are needed.
     start_expression : :class:`~pydynaa.EventExpression`
         EventExpression node should wait for before starting.

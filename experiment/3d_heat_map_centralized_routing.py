@@ -6,7 +6,8 @@ import pandas
 import pydynaa
 from util.RoutingComparison import run_centralized_routing_test, run_QCast_routing_test,run_SLMP_routing_test,run_greedy_routing_test
 """
-this program data is for matlab 3d_heat_map
+This program is for researching the performance of CER with integrated environmental parameters.
+This program data is for matlab 3d_heat_map.
 """
 if __name__ == '__main__':
     fidelity_data = pandas.DataFrame()
@@ -49,7 +50,7 @@ if __name__ == '__main__':
 
     ### run Centralized routing test ###
     for qchannel_loss_init in [qchannel_loss_init_group_5, qchannel_loss_init_group_4, qchannel_loss_init_group_3, qchannel_loss_init_group_2, qchannel_loss_init_group_1]:
-        ### because the data only allow to groupby one dimension, mannuely comabine qchannel_loss_noisy and dephase_rates , run 25 times experiment to get data ###
+        ### Because the data can only be grouped by one dimension, manually combine qchannel_loss_noisy and dephase_rates, and run the experiment 25 times to get data ###
         qchannel_loss_noisy = qchannel_loss_noisy_group_1
        # qchannel_loss_noisy = qchannel_loss_noisy_group_2
        # qchannel_loss_noisy = qchannel_loss_noisy_group_3

@@ -1,7 +1,7 @@
 from util.NodeStruct import NodeStruct
 
 """
-the principle of Q-cast is that 
+the principle of Q-cast: 
 firstly, Dijkstra algorithm or Greedy is used for path selection, and the path with the maximum theoretical throughput is taken as the main path.
 secondly, limit the hop number "l" and select recovery Path as the alternative path. 
 finally, When the primary path entanglement distribution fails, enable the alternative path until the path is successfully established, then do entanglement swapping.

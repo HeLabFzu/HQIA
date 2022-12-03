@@ -41,7 +41,7 @@ def Centralized_Cellular_Network_setup(depolar_rates,dephase_rates,qchannel_loss
         This network is also used by the matching integration test.
 
     """
-    ### globals may be effect other document to quote "Repeater_X","Controller_X", be notice ####
+    ### globals may be effect other document to quote "Repeater_X","Controller_X"####
     name = globals()
     # Setup Physical Noisy
     ### if time_independent is True then the rate is a probability, if False(default), it is exponential depolarizing rate per unit time [Hz] ###

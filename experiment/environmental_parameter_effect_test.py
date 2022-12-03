@@ -17,7 +17,11 @@ from netsquid.components import instructions as instr
 from netsquid.util.datacollector import DataCollector
 from netsquid.protocols.protocol import Signals
 from matplotlib import pyplot as plt
+"""
+This program explores the impact of environmental interference.
 
+The program takes about 5 minutes to complete.
+"""
 def define_network_and_protocol(depolar_rate,dephase_rate,qchannel_loss_init,qchannel_loss_noisy):
     network = Centralized_Chain_Network_setup(node_distance=100,depolar_rate=depolar_rate,dephase_rate=dephase_rate,
                              qchannel_loss_init=qchannel_loss_init, qchannel_loss_noisy=qchannel_loss_noisy)
@@ -265,14 +269,3 @@ if __name__ == '__main__':
     print("qchannel_loss_noisy_rate fidelity")
     print(qchannel_loss_noisy_data)
     plt.show()
-
-
-"""
- 子图标题说明里要说明 各个rate 表示什么意思，子图标题和总图标题，都在latex里面设置 , 要说明是6-hops 进行测试的，一定要注意说明noisy-rate 单位是 db/km, 我们单光纤长度是100km，所以才将noisy-rate数字设的比较小。另外，要说明一下因为6-hops 跳数比较多，且
-hop之间距离为100km，所以我们选取的环境干扰量小一些，这样做为了能够更好的体现环境参数对fidelity的影响。 depolar_rate 0.08有点上翘，用误差解释，可以接受。（前面描述图的时候，也要说到竖线是标准误差）
-
-要在论文里面说明，各个环境RATE的取值，表示的是，所有设备都取该值。
-
-总图标题，environmental-parameter effect on fidelity with 6-hops
-
-"""

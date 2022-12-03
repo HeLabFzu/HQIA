@@ -17,7 +17,11 @@ from netsquid.components import instructions as instr
 from netsquid.util.datacollector import DataCollector
 from netsquid.protocols.protocol import Signals
 from matplotlib import pyplot as plt
+"""
+This program explores the communication fidelity under integrated conditions.
 
+The program takes about 2 minutes to complete.
+"""
 def generate_path(depolar_rates,dephase_rates,qchannel_loss_init,qchannel_loss_noisy):
     network = Centralized_Cellular_Network_setup(depolar_rates=depolar_rates,dephase_rates=dephase_rates,
                              qchannel_loss_init=qchannel_loss_init, qchannel_loss_noisy=qchannel_loss_noisy)
@@ -440,17 +444,3 @@ if __name__ == '__main__':
     print(fidelity_difference_data_path_B_vs_path_C)
 
     plt.show()
-
-
-
-
-
-"""
-这个实验图需要说明三个path的具体节点路径，只需要对着拓扑图写出文字说明即可，不需要画出来。避免重复）
-从这个实验中，我们想说明的问题是，在长路径拥有更低的干扰的时候，它的fidelity表现比短路径好。同时我们在多组数据中随着干扰参数差别扩大，fidelity的差值也扩大了。
-"""
-
-
-"""
-在github上要上传两个table,说明各个group的环境参数区别。github还需要说明，由于随机性误差影响，并不是每一次实验都能得出相同的值，但是整体趋势是不会改变的。
-"""

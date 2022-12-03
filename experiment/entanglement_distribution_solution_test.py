@@ -22,6 +22,11 @@ from netsquid.util.datacollector import DataCollector
 from netsquid.protocols.protocol import Signals
 from matplotlib import pyplot as plt
 
+"""
+This program explores the performance of entanglement preparation & distribution solutions(W-state Based CEPD, Double-photon Based CEPD, Traditional DEPD).
+The program takes about 3 minutes to complete.
+"""
+
 def generate_distributed_path(depolar_rate,dephase_rate,qchannel_loss_init,qchannel_loss_noisy):
     network = Distributed_Cellular_Network_setup(node_distance=100,depolar_rate=depolar_rate,dephase_rate=dephase_rate,
                              qchannel_loss_init=qchannel_loss_init, qchannel_loss_noisy=qchannel_loss_noisy)
