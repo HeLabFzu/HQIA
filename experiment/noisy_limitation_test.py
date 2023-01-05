@@ -24,8 +24,7 @@ from netsquid.protocols.protocol import Signals
 
 
 """
-we design a two-node with 100km-qchannel distribution test.
-Acorrding to this program, we can found that the distribution_success_rate<0.05 when qchannel_loss_noisy=0.2db/km with 100 experiments, so we defined 100km noisy_limitation=0.2db/km. 
+we design a two-node with 100km-qchannel distribution test to explore the channel noise limitation according the distribution success rate.
 """
 
 def create_topo(qchannel_loss_noisy):
@@ -61,7 +60,7 @@ def define_network_and_protocol(qchannel_loss_noisy):
 
 if __name__ == '__main__':
     fidelity_data = pandas.DataFrame()
-    for qchannel_loss_noisy in [0.1,0.2,0.25]:
+    for qchannel_loss_noisy in [0,0.05,0.1,0.15,0.2,0.25,0.3]:
         n = 0
         while(n<100):
             Entanglement_Distribution_Signal = True

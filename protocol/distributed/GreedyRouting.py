@@ -54,7 +54,6 @@ class NetworkRoutingTable:
                 return routingtable
 
 
-### DomainTable only for pseudo_distributed_topo ###
 class DomainTable:
     def __init__(self,network):        
         Controller_A = network.subcomponents["Controller_A"]
@@ -97,7 +96,6 @@ def Greedy(network,src_host,dst_host):
                  index = i
         path_temp.append(rt.neighbor_nodes[index])
 
-    ### find controller and insert to path, only for pseudo_distributed_topo ###
     dt = DomainTable(network)
     path = []
     for i in range(len(path_temp)-1):

@@ -59,7 +59,6 @@ class NetworkRoutingTable:
             if node == routingtable.node:
                 return routingtable
 
-### DomainTable only for pseudo_distributed_topo ###
 class DomainTable:
     def __init__(self,network):
         Controller_A = network.subcomponents["Controller_A"]
@@ -191,7 +190,6 @@ def QCast(network,src_host,dst_host):
 
     
    
-    ### find controller and insert to path, only for pseudo_distributed_topo ###
     path = []
     for i in range(len(main_path)-1):
         path.append(main_path[i])

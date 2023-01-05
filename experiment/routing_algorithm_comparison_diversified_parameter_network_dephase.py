@@ -13,8 +13,6 @@ from matplotlib import pyplot as plt
 """
 This program explores routing in diversified parameter network (dephasing rate).
 
-Generally speaking, the distributed routing algorithm can only run in distributed topology. However, in order to eliminate the interference of inconsistent topology between centralized_routing and distributed_routing and obtain more accurate experimental results, this experiment runs distributed_routing_algorithm(Q-cast, Greedy, SLMP) in a pseudo_distributed_topo(which is a centralized topo, but we code to hide the controller and the distributed_routing_algorithm will think the topo as a distributed topo).
-
 The program take about 10 minutes to complete.
 """
 if __name__ == '__main__':

@@ -14,9 +14,9 @@ from protocol.centralized.CentralizedSwapping import CentralizedSwapping
 from protocol.centralized.CentralizedTeleportation import CentralizedTeleportation
 from protocol.centralized.CentralizedRouting import CentralizedRouting
 from protocol.centralized.CentralizedResourceCheckReserve import CentralizedResourceCheckReserve
-from protocol.distributed.pseudo_distributed_topo_GreedyRouting import Greedy
-from protocol.distributed.pseudo_distributed_topo_SLMPRouting import SLMP
-from protocol.distributed.pseudo_distributed_topo_QCastRouting import QCast
+from protocol.distributed.GreedyRouting import Greedy
+from protocol.distributed.SLMPRouting import SLMP
+from protocol.distributed.QCastRouting import QCast
 from util.CheckDistribution import CheckDistribution
 from util.QubitCreation import CreateQubit
 from util.ResourceLockRelease import resource_lock,resource_release
@@ -26,11 +26,6 @@ from util.ClearCentralControllerTable import ClearCentralControllerTable
 from netsquid.util.datacollector import DataCollector
 from netsquid.protocols.protocol import Signals
 from matplotlib import pyplot as plt
-
-"""
-Generally speaking, the distributed routing algorithm can only run in distributed topology. However, in order to eliminate the interference of inconsistent topology between centralized_routing and distributed_routing and obtain more accurate experimental results, this experiment runs distributed_routing_algorithm(Q-cast, Greedy, SLMP) in a pseudo_distributed_topo(which is a centralized topo, but we code to hide the controller and the distributed_routing_algorithm will think the topo as a distributed topo).
-
-"""
 
 def define_centralized_cellular_network(depolar_rates,dephase_rates,qchannel_loss_init,qchannel_loss_noisy,num_mem_positions):
     network = Centralized_Cellular_Network_setup(depolar_rates=depolar_rates,dephase_rates=dephase_rates,

@@ -80,7 +80,6 @@ class AdjacentTable:
             if node == item[0]:
                 return item[2]
 
-### DomainTable only for pseudo_distributed_topo ###
 class DomainTable:
     def __init__(self,network):
         Controller_A = network.subcomponents["Controller_A"]
