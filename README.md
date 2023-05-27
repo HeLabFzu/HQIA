@@ -1,9 +1,9 @@
-# Repo for Centralized Architecture of Quantum Internet
+# Repo for Hierarchical Architecture of Quantum Internet
 ## Abstract
-The research of architecture has tremendous significance in realizing quantum internet. Currently, studies focus on the distributed quantum internet architecture, which relies on quantum repeaters to perform entanglement preparation & distribution. In this paper, we analyze the distributed architecture in detail and demonstrate that it has three limitations: 1) high maintenance overhead, 2) low-performance entanglement distribution, and 3) unable to support optimal entanglement routing. We propose a three-layer centralized quantum internet architecture and the communication model to solve the problems above. At the top layer, we deploy the central controller to collect the global network state for supporting optimal entanglement routing. At the middle layer, we design the local domain controller for centralized entanglement preparation & distribution, reducing maintenance overhead and improving efficiency. At the bottom layer, quantum devices are responsible for executing quantum operations. The evaluation results show that the entanglement distribution efficiency of centralized architecture is 11.5% higher than that of distributed architecture on average (minimum 3.3%, maximum 37.3%), and the entanglement routing performance of centralized architecture is much better than that of distributed architecture according to the fidelity and throughput.
+The research of architecture has tremendous significance in realizing quantum internet. Currently, studies focus on the distributed quantum internet architecture, which relies on quantum repeaters to perform entanglement preparation & distribution. In this paper, we analyze the distributed architecture in detail and demonstrate that it has three limitations: 1) possible high maintenance overhead, 2) possible low-performance entanglement distribution, and 3) unable to support optimal entanglement routing. We design a hierarchical quantum internet architecture and a communication model to solve the problems above. We also present a W-state Based Centralized Entanglement Preparation & Distribution (W-state Based CEPD) scheme and a Centralized Entanglement Routing (CER) strategy within hierarchical architecture and perform an experimental comparison with other entanglement preparation & distribution schemes and entanglement routing strategies within the distributed architecture. The evaluation results show that the entanglement distribution efficiency of hierarchical architecture is 11.5% higher than that of distributed architecture on average (minimum 3.3%, maximum 37.3%), and the entanglement routing performance of hierarchical architecture is much better than that of distributed architecture according to the fidelity and throughput.
 ## Repository Structure
 - `experiment`                   source code of experiment
-	+ `integrated_example.py`    a completed use case for centralized quantum internet communication.
+	+ `integrated_example.py`    a completed use case for hierarchical quantum internet communication.
 	+ `environmental_parameter_effect_test.py` impact of environmental interference
 	+ `route_hops_effect_test.py`     hops vs. fidelity
 	+ `path_with_different_environmental_parameter_effect_test.py` shows the importance of environmental interference in entanglement routing
@@ -16,7 +16,7 @@ The research of architecture has tremendous significance in realizing quantum in
 	+ `noisy_limitation_test.py` shows the maximum acceptable noise
 of a 100 km quantum channel is 0.2 dB/km
 - `protocol`                     protocols for quantum internet
-	+ `centralized`                centralized quantum internet protocol
+	+ `centralized`                hierarchical quantum internet protocol
 		* `CentralizedEntanglementDistribution.py` including entanglement preparation & distribution / Physical & Link Layer
 		* `CentralizedResourceCheckReserve.py` resource check & reservation / Link Layer
 		* `CentralizedRouting.py` CER / Network Layer
@@ -31,10 +31,10 @@ of a 100 km quantum channel is 0.2 dB/km
 		* `SLMPRouting.py` SLMP Routing / Network Layer
 		* `DistributedTeleportation.py` quantum teleportation / Transport Layer
 - `topology`                     topologies for quantum internet
-	+ `Centralized_Cellular_Topo.py` diversified parameter network of centralized cellular topology
-	+ `Centralized_Cellular_Topo_simple_parameter.py` equivalent parameter network of centralized cellular topology
+	+ `Centralized_Cellular_Topo.py` diversified parameter network of hierarchical cellular topology
+	+ `Centralized_Cellular_Topo_simple_parameter.py` equivalent parameter network of hierarchical cellular topology
 	+ `Distributed_Cellular_Topo_simple_parameter.py` equivalent parameter network of distributed cellular topology
-	+ `Centralized_Chain_Topo.py` centralized chain topology
+	+ `Centralized_Chain_Topo.py` hierarchical chain topology
 - `util`                         utilities functions
 	+ `CentralController.py` include Central State Matrix, Domain Shortest Path Table, Domain Edge Repeater Table
 	+ `CheckDistribution.py` check entanglement distribution result
