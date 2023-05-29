@@ -61,3 +61,7 @@ of a 100 km quantum channel is 0.2 dB/km
 The results may fluctuate slightly due to randomness; our original results are shown in result.pdf.
 ## Authors
 - Binjie He (hebinjie33@gmail.com)
+- Dong Zhang (zhangdong@fzu.edu.cn)
+- Seng W. Loke (seng.loke@deakin.edu.au)
+- Shengrui Lin (xmlsr@foxmail.com)
+- Luke Lu (luklu@cisco.com)
